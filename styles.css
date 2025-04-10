@@ -1,0 +1,183 @@
+body {
+    padding: 20px;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+    padding: 15px;
+}
+
+#newEntryForm {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+#newEntryForm .form-group {
+    margin-bottom: 0;
+}
+
+#newEntryForm .btn {
+    margin-top: 15px;
+}
+
+.list-group-item {
+    padding: 12px 15px;
+    border-left: none;
+    border-right: none;
+}
+
+.list-group-item:first-child {
+    border-top: none;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+#message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 1000;
+    display: none;
+}
+
+#message.success {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+#message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+/* Verbesserte Darstellung der Einträge */
+.entry-time {
+    min-width: 120px;
+    color: #495057;
+}
+
+.entry-content {
+    min-width: 0; /* Ermöglicht text-overflow in flexbox */
+}
+
+.entry-activity {
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    min-width: 0; /* Ermöglicht text-overflow in flexbox */
+}
+
+.entry-actions {
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+/* Verbesserte Datumsauswahl */
+.date-list-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.date-list-item:hover {
+    background-color: #f8f9fa;
+}
+
+.date-list-item .text-danger {
+    font-weight: bold;
+}
+
+.date-list-item .text-success {
+    font-weight: bold;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 10px;
+    }
+    
+    .card {
+        margin-bottom: 15px;
+    }
+    
+    .list-group-item {
+        padding: 10px;
+    }
+    
+    #newEntryForm .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .btn {
+        padding: 5px 10px;
+        font-size: 0.875rem;
+    }
+    
+    .form-control {
+        font-size: 0.875rem;
+    }
+    
+    .date-list-item .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .date-list-item .text-danger,
+    .date-list-item .text-success {
+        margin-top: 5px;
+    }
+    
+    .entry-time {
+        min-width: 110px;
+    }
+    
+    .entry-content {
+        flex-direction: column;
+    }
+    
+    .entry-actions {
+        margin-top: 10px;
+    }
+    
+    .entry-actions .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Verbesserte Modal-Darstellung */
+.modal-content {
+    border-radius: 8px;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0,0,0,0.125);
+} 

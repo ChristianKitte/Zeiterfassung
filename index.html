@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeiterfassung</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid py-3">
+        <h1 class="text-center mb-4">Zeiterfassung</h1>
+        
+        <div class="row">
+            <!-- Linke Spalte: Datumsauswahl -->
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h5 class="mb-0">Datum auswählen</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="viewDate">
+                        </div>
+                        <div id="dateList" class="list-group">
+                            <!-- Daten mit Einträgen werden hier dynamisch eingefügt -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hauptbereich: Einträge und Eingabe -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Tagesübersicht</h5>
+                        <div class="text-right">
+                            <span class="mr-3">Gesamtstunden: <strong id="totalHours">0:00</strong></span>
+                            <button class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#newEntryForm">
+                                Neuer Eintrag
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- Eingabeformular -->
+                        <div id="newEntryForm" class="collapse mb-4">
+                            <form id="timeForm" class="card card-body bg-light">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="date">Datum:</label>
+                                            <input type="date" class="form-control" id="date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="startTime">Startzeit:</label>
+                                            <input type="time" class="form-control" id="startTime" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="endTime">Endzeit:</label>
+                                            <input type="time" class="form-control" id="endTime" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="activity">Tätigkeit (optional):</label>
+                                            <input type="text" class="form-control" id="activity">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Speichern</button>
+                            </form>
+                        </div>
+
+                        <!-- Einträge Liste -->
+                        <div id="entriesList" class="list-group">
+                            <!-- Einträge werden hier dynamisch eingefügt -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="message"></div>
+    </div>
+
+    <!-- Modal für Bearbeitung -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Eintrag bearbeiten</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <input type="hidden" id="editId">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="editDate">Datum:</label>
+                                    <input type="date" class="form-control" id="editDate" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="editActivity">Tätigkeit:</label>
+                                    <input type="text" class="form-control" id="editActivity">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="editStartTime">Startzeit:</label>
+                                    <input type="time" class="form-control" id="editStartTime" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="editEndTime">Endzeit:</label>
+                                    <input type="time" class="form-control" id="editEndTime" required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+                    <button type="button" class="btn btn-primary" id="saveEdit">Speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
