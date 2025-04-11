@@ -33,3 +33,6 @@ dass es durchaus Verbesserungspotential hat, wenn auch bereits auf etwas höhere
 explizit angepasst, respektive einzelne Details angewiesen. Es handelt sich somit nicht um den initialen Entwurf der IDE.
 
 ![image](https://github.com/user-attachments/assets/b79889e0-d070-407f-bff3-833c78cfb910)
+
+Aktuell werden noch keine Feiertage unterstützt sowie Tage mit Einträgen nicht im Kalender farblich unterlegt. Auch lassen sich die Einträge im
+nachhinein nicht editieren (Problem beim Click Event des Button). 
