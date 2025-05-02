@@ -1,6 +1,4 @@
-{"date": "2025-04-09", "startTime": "21:00", "endTime": "21:30", "activity": "huj", "id": "e8db4377-c102-4e64-9884-c0f598e3ac3c"}
-{"date": "2025-04-10", "startTime": "21:00", "endTime": "21:30", "activity": "h", "id": "3004f1e1-4e4a-49b9-969f-c5fb2a1b4846"}
-{"date": "2025-04-09", "startTime": "22:00", "endTime": "22:30", "activity": "test", "id": "0bda5b67-fda2-48a4-ac4b-6473202e0c1a"}
-{"date": "2025-04-09", "startTime": "21:00", "endTime": "22:00", "activity": null, "id": "cdae7f9b-8515-4e06-822a-f7a31bcef72b"}
-{"date": "2025-04-10", "startTime": "22:00", "endTime": "23:00", "activity": null, "id": "998b3c92-d18b-4e31-b28f-e2440b0ec450"}
-{"date": "2025-04-08", "startTime": "08:45", "endTime": "20:30", "activity": "xxx", "id": "a78103a5-1316-44bc-9348-aca0abb3d0b2"}
+{"id": "ef326051-2bf4-404a-b5d4-f85f667dbe9c", "date": "2025-04-08", "startTime": "13:55", "endTime": "18:54", "activity": "Test5"}
+{"id": "79a31e97-5fad-4827-82d6-8b6686fb0eca", "date": "2025-04-29", "startTime": "14:08", "endTime": "15:00", "activity": "tests3344"}
+{"id": "66ed98aa-932b-4edd-a7df-713c1d6a1f82", "date": "2025-04-29", "startTime": "22:00", "endTime": "23:00", "activity": "Das ist ein ge\u00e4nderter Eintrag"}
+{"date": "2025-04-17", "startTime": "08:00", "endTime": "15:30", "activity": "Test25", "id": "d1ca1909-72f9-4627-9031-441edea97819"}

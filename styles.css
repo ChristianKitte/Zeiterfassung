@@ -1,8 +1,9 @@
 body {
+    background-color: #f7f9fc; /* Pastellblau */
     padding: 20px;
-    background-color: #f8f9fa;
     font-family: Arial, sans-serif;
 }
+
 
 .container-fluid {
     max-width: 1400px;
@@ -17,14 +18,18 @@ body {
 }
 
 .card-header {
-    background-color: #f8f9fa;
+    background-color: #e3f2fd; /* Pastellblau */
     border-bottom: 1px solid rgba(0,0,0,0.125);
     padding: 15px;
 }
 
+
 #newEntryForm {
-    background-color: #f8f9fa;
+    background-color: #e8f5e9; /* Pastellgrün */
     border-radius: 8px;
+    padding: 15px;
+}
+
     padding: 15px;
 }
 
@@ -167,17 +172,31 @@ body {
     }
 }
 
+#entriesList .list-group-item {
+    background-color: #fbfcfe; /* Sehr helles Pastell */
+    transition: background-color 0.3s ease;
+}
+
+#entriesList .list-group-item.active {
+    background-color: #c8e6c9; /* Pastellgrün */
+    color: #2e2e2e; /* Dunkles Grau für Kontrast */
+}
+
 /* Verbesserte Modal-Darstellung */
 .modal-content {
     border-radius: 8px;
 }
 
 .modal-header {
+    background-color: #e3f2fd; /* Pastellblau */
+}
     background-color: #f8f9fa;
     border-bottom: 1px solid rgba(0,0,0,0.125);
 }
 
 .modal-footer {
+    background-color: #e3f2fd; /* Pastellblau */
+}
     background-color: #f8f9fa;
     border-top: 1px solid rgba(0,0,0,0.125);
 } 
